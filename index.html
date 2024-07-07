@@ -46,13 +46,7 @@
             font-weight: normal;
             font-style: normal;
         }
-        .title {
-            font-family: 'intro';
-            font-size: 5rem;
-            color: #e5ff00;
-            text-shadow: 2px 2px 4px #331801;
-            animation: glow 5s infinite alternate ease-in-out;
-        }
+
         .game-board {
             display: flex;
             flex-wrap: wrap;
@@ -122,14 +116,14 @@
         background-attachment: fixed; /* Оставляет фон на месте при прокрутке */
     }
 
-    #loading-text {
-            cursor: default;
-            text-align: top;
-            margin-bottom: 20px;
-            font-family: 'Intro', sans-serif; /* Применение локального шрифта */
+    .loading-text {
+        margin-top: -170px; /* Опускаем заголовок еще ниже */
+        font-size: 3rem;
+        position: relative; /* Позволяет контролировать z-index */
+        z-index: 10; /* Устанавливаем значение больше, чем у других элементов */
         }
 
-        #loading-text span {
+        .loading-text span {
             display: inline-block;
             animation: bounce 0.8s ease-in-out infinite alternate;
             font-size: 120px;
