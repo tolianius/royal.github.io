@@ -122,12 +122,47 @@
         background-attachment: fixed; /* Оставляет фон на месте при прокрутке */
     }
 
-    .title {
-        margin-top: -170px; /* Опускаем заголовок еще ниже */
-        font-size: 3rem;
-        position: relative; /* Позволяет контролировать z-index */
-        z-index: 10; /* Устанавливаем значение больше, чем у других элементов */
-    }
+    #loading-text {
+            cursor: default;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Intro', sans-serif; /* Применение локального шрифта */
+        }
+
+        #loading-text span {
+            display: inline-block;
+            animation: bounce 0.8s ease-in-out infinite alternate;
+            font-size: 120px;
+            color: rgb(209, 178, 5);
+            text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+                        0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+                        0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+            transform-origin: bottom;
+        }
+
+        #loading-text span:nth-child(1) { animation-delay: 0s; }
+        #loading-text span:nth-child(2) { animation-delay: 0.1s; }
+        #loading-text span:nth-child(3) { animation-delay: 0.2s; }
+        #loading-text span:nth-child(4) { animation-delay: 0.3s; }
+        #loading-text span:nth-child(5) { animation-delay: 0.4s; }
+        #loading-text span:nth-child(6) { animation-delay: 0.5s; }
+        #loading-text span:nth-child(7) { animation-delay: 0.6s; }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+                             0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+                             0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+            }
+            100% {
+                transform: translateY(-20px);
+                text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+                             0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+                             0 9px 0 transparent, 0 50px 25px rgba(0, 0, 0, 0.2);
+            }
+        }
+
 
     .game-board {
         position: absolute; /* Позиционирование относительно ближайшего предка с относительным или абсолютным позиционированием */
@@ -174,8 +209,8 @@
 </head>
 <body>
     <div class="container">
-       <h1 class="title">
-    <span class="title">G</span><span class="title">O</span><span class="title">R</span><span class="title">I</span><span class="title">L</span><span class="title">L</span><span class="title">A</span><span class="title">S</span>
+       <h1 id="loading-text">
+    <span>G</span><span>O</span><span>R</span><span>I</span><span>L</span><span>L</span><span>A</span><span>S</span>
        </h1>
         <div class="game-board" id="gameBoard"></div>
         <div class="play-buttons-container">
