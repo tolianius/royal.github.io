@@ -28,8 +28,11 @@
             background-attachment: fixed; /* Оставляет фон на месте при прокрутке */
         }
         .container {
-            text-align: center;
-            margin-top: 20px;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           width: 90%; /* Для центровки содержимого */
+        }
         }
         *, *::before, *::after {
             box-sizing: border-box;
@@ -124,7 +127,7 @@
         z-index: 10; /* Устанавливаем значение больше, чем у других элементов */
         }
 
-        #loading-text span {
+    #loading-text span {
             display: inline-block;
             animation: bounce 0.8s ease-in-out infinite alternate;
             font-size: 60px;
