@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>RoyalMines</title>
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <style>
         @import url("https://fonts.googleapis.com/css?family=Pacifico&text=Pure");
         @import url("https://fonts.googleapis.com/css?family=Roboto:700&text=css");
@@ -41,7 +41,7 @@
             --color-quinary: #ee6352;
         }
         @font-face {
-            font-family: 'intro';
+            font-family: 'Intro';
             src: url('intro.otf') format('opentype');
             font-weight: normal;
             font-style: normal;
@@ -116,14 +116,14 @@
         background-attachment: fixed; /* Оставляет фон на месте при прокрутке */
     }
 
-    .loading-text {
+    #loading-text {
         margin-top: -170px; /* Опускаем заголовок еще ниже */
         font-size: 3rem;
         position: relative; /* Позволяет контролировать z-index */
         z-index: 10; /* Устанавливаем значение больше, чем у других элементов */
         }
 
-        .loading-text span {
+        #loading-text span {
             display: inline-block;
             animation: bounce 0.8s ease-in-out infinite alternate;
             font-size: 120px;
